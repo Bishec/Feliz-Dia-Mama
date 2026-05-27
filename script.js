@@ -153,6 +153,11 @@ function init() {
     composer.addPass(renderScene);
     composer.addPass(bloomPass);
 
+    // Zoom inicial según dispositivo
+    const isMobile = window.innerWidth < 768;
+    targetZoom = isMobile ? 2.5 : 1;
+    currentZoom = targetZoom;
+
     window.addEventListener('resize', onWindowResize);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('touchmove', onTouchMove, false);
@@ -323,7 +328,8 @@ startBtn.addEventListener('click', () => {
     intro.classList.add('hidden');
     content.classList.remove('hidden');
     started = true;
-    targetZoom = 2;
+    const isMobile = window.innerWidth < 768;
+    targetZoom = isMobile ? 3.5 : 2;
 });
 
 init();
