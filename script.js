@@ -205,7 +205,7 @@ function createStickerSprite(emoji, label) {
 
     // Escalado responsivo
     const isMobile = window.innerWidth < 768;
-    const baseScale = isMobile ? 1.0 : 0.75;
+    const baseScale = isMobile ? 0.5 : 0.75;
     sprite.scale.set(baseScale, baseScale * ((size + 80) / size), 1);
     return sprite;
 }
@@ -307,7 +307,7 @@ function animate() {
     const hits = raycaster.intersectObjects(stickerNodes);
     stickerNodes.forEach(s => {
         const isMobile = window.innerWidth < 768;
-        const base = isMobile ? 1.0 : 0.75;
+        const base = isMobile ? 0.5 : 0.75;
         s.scale.setScalar(hits.length > 0 && hits[0].object === s ? base * 1.15 : base);
     });
 
