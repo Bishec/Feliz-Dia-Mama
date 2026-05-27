@@ -343,26 +343,28 @@ canvas {
     }
 
     .message-container {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0.8rem;
+        background: rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        letter-spacing: 0px;
     }
 
     .divider {
-        margin: 1.5rem auto;
+        margin: 0.8rem auto;
+        width: 40px;
     }
 
     .quote {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     #popup-card {
